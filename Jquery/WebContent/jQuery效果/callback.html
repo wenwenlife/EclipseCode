@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>动画</title>
+<script src="jQuery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#big").click(function(){
+		$("div").animate({
+			left:'250px',
+			opacity:'0.5',
+			height:'+=150px',
+			width:'+=150px'
+		},2000);
+	});
+	
+	$("#small").click(function(){
+		$("div").animate({
+			left:'250px',
+			opacity:'5',
+			height:'-=50px',
+			width:'-=50px',
+		},2000,function(){
+			alert("动画结束");
+		});
+	});
+});
+</script>
+</head>
+<body>
+<div style="width: 400px;height:350;background-color: red;position: absolute;"></div>
+<button type="button" id="big">变大</button>
+<button type="button" id="small">变小</button>
+</body>
+</html>

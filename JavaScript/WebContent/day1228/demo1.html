@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+   var s="ss";
+   document.writeln(Object.prototype.toString.apply(s));
+   s.t=8;
+   document.writeln(s.t);
+   
+   !function(a){
+	   'use strict'
+	   arguments[0].x=100;
+	   document.writeln(console.log(a.x));
+   }({x:1})
+</script>
+</head>
+<body>
+
+</body>
+</html>

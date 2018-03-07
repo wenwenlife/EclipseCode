@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>添加元素</title>
+<script src="jQuery.js"></script>
+<script type="text/javascript">
+
+/* append/prepend 是在选择元素内部嵌入。
+after/before 是在元素外面追加。 */
+$(document).ready(function(){
+	/* 末尾 */
+	$("p").click(function(){
+		$("p").append("ssss");
+	});
+	$("p").click(function(){
+		/* 开头 */
+		$("p").prepend("dddd");
+	});
+	/* 指定元素之后 */
+	$("p").click(function(){
+		$("p").after("eeee");
+	});
+	/* 指定元素之前 */
+	$("p").click(function(){
+		$("p").before("qqqq");
+	});
+	
+});
+
+</script>
+</head>
+<body>
+<p> 你好</p>
+</body>
+</html>

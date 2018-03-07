@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>隐藏/显示</title>
+<script src="jQuery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("").click(function(){
+            $(this).hide();		
+	});
+
+	
+ 	$("#ss :button").click(function(){
+		$(this).parents("#ss").hide("slow",function(){
+			alert("ss");
+		});
+	}); 
+	
+/* 	$("button").click(function(){
+		$("#ss").show("slow");
+	}); */
+	
+	
+	$("#qie").click(function(){
+		$("#ss").toggle();
+	});
+});
+
+</script>
+</head>
+<body>
+<p>点击我,不会消失</p>
+<div id="ss" style="width: 400px;height: 350px;border: 1px solid #fff;background-color: red" >
+     <input type="button" value="隐藏">
+     <p>联系人</p><br>
+     <p>姓名</p>
+</div>
+<button type="button" id="qie">切换</button>
+<button type="button">显示</button>
+<p>点击我,我也会消失</p>
+<p>点击我,我也也会消失</p>
+</body>
+</html>

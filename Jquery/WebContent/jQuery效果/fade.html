@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>淡入淡出</title>
+<script src="jQuery.js"></script>
+<script>
+ $(document).ready(function(){
+	$("button").click(function(){
+		/* $("div:first").fadeIn(1500);
+		$("div:last").fadeIn(2000);
+		$("#second").fadeOut(1000); */
+		$("div").fadeToggle(2000);
+	});
+	 
+ });
+</script>
+</head>
+<body>
+<button type="button">切换</button>
+<div style="width: 300px ;height: 250px ;background-color:red;display:none"></div>
+<div id="second" style="width: 300px ;height: 250px ;background-color:green;"></div>
+<div style="width: 300px ;height: 250px ;background-color:yellow; display:none"></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+//通过javascript的日期对象来得到当前的日期，并输出。 XXXX年XX月X日 星期X--班级总分为:81
+
+var date =new Date();
+var riqi=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+var dat=date.getDay();
+var day=riqi[dat];
+var date1=date.getFullYear()+"年"+date.getMonth()+1+"月"+date.getDay()+"日"+day;
+
+//成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作哦
+var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+var arr=scoreStr.split(";");
+var sum=0;
+for(var i=0;i<arr.length;i++){
+	sum+=parseInt(arr[i].substr(arr[i].indexOf(':')+1))
+}
+document.write(date1+"考试平均成绩:  "+sum/arr.length);
+
+
+//从数组中将成绩撮出来，然后求和取整，并输出。
+
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

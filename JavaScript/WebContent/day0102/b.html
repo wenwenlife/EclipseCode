@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+  //查看对象中所有属性
+  var s=Object.getOwnPropertyDecriptor(Object,'prototype');
+  //
+   var man={
+	weibo: '@wen',
+	age: null,
+	get age(){
+		if(this.age==undefined){
+			return new Date().getFullYear()-1995;
+		}else{
+			return this.age;
+		}
+	},
+	
+	set age(val){
+		val+=val;
+		if(!isNaN(val)&&val>0&&val<150){
+			this.age+=val;
+		}else{
+			throw new Error("Incorrect val="+val);
+		}
+	}
+	
+   };
+  
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

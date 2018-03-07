@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 定时器 -->
+</head>
+<body>
+<!-- <input type="button" value="btn" onclick="c()"> -->
+<span id="span1">5</span>秒后跳转首页,如未跳转<a href="https://www.baidu.com">请点击</a>
+</body>
+<script type="text/javascript">
+
+/* var closes;
+   var fn=function(){
+	   alert("xxx");
+	   closes= setTimeout(fn, 3000);
+   };
+   
+   var c=function(){
+	   clearTimeout(closes);
+   };
+  fn();
+   */
+  
+   /* 自动循环定时器 */
+/*    var s;
+ s= setInterval(function(){
+	   alert("vv");
+   }, 3000);
+   var c=function(){
+	   clearInterval(s);
+   } */
+   
+   
+/*    需求:五秒后跳转首页 */
+
+	var t=5;
+	var tim;
+	tim = setInterval(function(){
+		var ts=document.getElementById("span1");
+		if(t>=0){
+			ts.style.color="red";
+			ts.innerHTML=t;
+
+			t--;
+		}else{
+			location.href="https://www.baidu.com";
+			clearInterval(tim);
+		}
+		}, 1000);
+</script>
+</html>

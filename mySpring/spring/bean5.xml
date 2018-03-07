@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+xmlns="http://www.springframework.org/schema/beans"  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"  
+xsi:schemaLocation="  
+http://www.springframework.org/schema/beans         
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+http://www.springframework.org/schema/context            
+http://www.springframework.org/schema/context/spring-context-4.0.xsd">  
+
+<bean id="chinese" class="com.wen.demo5.Chinese">
+   <property name="schools">
+  <list>
+ <value>小学</value>  
+ <value>中学</value>  
+ <value>高中</value>  
+  </list>
+  </property>
+  
+  <property name="scores">
+  <map>
+     <entry key="搜狗" value="输入法"/>
+     <entry key="360" value="浏览器"/>
+     <entry key="火狐" value="浏览器"/>
+  </map>
+  </property>
+  
+  <property name="phaseAxes">
+  <map>
+    <entry key="你好" value-ref="exbean"></entry>
+    <entry key="你不好" value-ref="exbean"></entry>
+    <entry key="订单" value-ref="exbean"></entry>
+  </map>
+  </property>
+  
+  <property name="health">
+  <props>
+  <prop key="睡眠">正常</prop>
+  <prop key="饮食">不正常</prop>
+  </props>
+  </property>
+</bean>
+<bean id="exbean" class="com.wen.demo4.ExampBean"/> 
+
+</beans>

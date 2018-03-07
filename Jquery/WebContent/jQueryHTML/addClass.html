@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>添加CSS样式</title>
+<script src="jQuery.js"></script>
+<script>
+$(document).ready(function(){
+	$("#button1").click(function(){
+		$("#div1").addClass("b1").slideUp().slideDown(5000);
+	});
+	
+	$("#button2").click(function(){
+		$("#div2").addClass("b2").slideUp().slideDown(5000);
+	});
+});
+
+</script>
+<style type="text/css">
+.b1{
+width:428px;
+height:572px;
+/* background-color:red; */
+background-image: url("a.jpg");
+float:left;
+}
+
+.b2{
+width:428px;
+height:572px;
+background-image: url("b.jpg");
+float: left;
+}
+
+</style>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+<button type="button" id="button1">涂山苏苏</button>
+<button type="button" id="button2" style="float: right;">涂山蓉蓉</button>
+</body>
+</html>

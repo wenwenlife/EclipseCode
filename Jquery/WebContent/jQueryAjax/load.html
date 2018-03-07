@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>加载Ajax</title>
+<script src=jQuery.js></script>
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+		$("#div1").load("ajax1.txt",function(){
+			alert("我已经加载完毕");
+		});
+		
+	});
+});
+
+</script>
+</head>
+<body>
+<div id="div1"></div>
+<button type="button">加载Ajax</button>
+</body>
+</html>

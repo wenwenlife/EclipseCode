@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+xmlns="http://www.springframework.org/schema/beans"  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:tx="http://www.springframework.org/schema/tx"
+xmlns:p="http://www.springframework.org/schema/p"  
+xmlns:c="http://www.springframework.org/schema/c" 
+xmlns:util="http://www.springframework.org/schema/util" 
+xsi:schemaLocation="  
+http://www.springframework.org/schema/beans         
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd  
+http://www.springframework.org/schema/context            
+http://www.springframework.org/schema/context/spring-context-4.3.xsd
+http://www.springframework.org/schema/util 
+http://www.springframework.org/schema/util/spring-util-4.3.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+
+<!-- 1.事务管理器 -->
+<bean id="txManger" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+  <property name="dataSource" ref="dataSource"></property>
+</bean>
+
+<!-- 2.事务通知 -->
+   <tx:advice id="txAdvice" transaction-manager="txManger">
+   <tx:attributes>
+   <tx:method name="" propagation="REQUIRED" isolation="DEFAULT"/>
+   </tx:attributes>
+   </tx:advice>
+<!-- 3.aop -->
+<aop:config>
+<aop:advisor advice-ref="txAdvice" pointcut="execution(* )"/>
+</aop:config>
+<!-- 获取其他bean的getter方法返回值 -->
+<bean id="" class="org.springframework.beans.factory.config.PropertyPathFactoryBean"></bean>
+</beans>

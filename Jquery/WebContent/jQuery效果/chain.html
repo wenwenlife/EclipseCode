@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>链</title>
+<script src="jQuery.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+	 $("button").click(function(){
+		 $("#p1").css("color","red").slideUp(2000).slideDown(2000,function(){
+			 $("#p1").css("color","#000");
+		 });
+	 }) ;
+  });
+</script>
+</head>
+<body>
+<p id="p1">jQuery要飞了</p>
+<button>点击这里</button>
+</body>
+</html>

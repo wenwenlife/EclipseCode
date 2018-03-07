@@ -1,0 +1,94 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cn.strong</groupId>
+  <artifactId>SpringTemplat</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+        <spring-context_version>4.3.2.RELEASE</spring-context_version>
+        <spring-beans_version>4.3.2.RELEASE</spring-beans_version>
+        <spring-core_version>4.3.2.RELEASE</spring-core_version>
+        <spring-expression_version>4.3.2.RELEASE</spring-expression_version>
+        <spring-jdbc_version>4.3.2.RELEASE</spring-jdbc_version>
+        <spring-tx_version>4.3.2.RELEASE</spring-tx_version>
+        
+        <c3p0_version>0.9.5.2</c3p0_version>
+        <commons-dbcp_version>1.4</commons-dbcp_version>
+        <commons-pool_version>2.4.2</commons-pool_version>
+        <mysql-connector_version>8.0.9-rc</mysql-connector_version>
+        <commons-logging_version>1.2</commons-logging_version>
+  </properties>
+  
+  <dependencies>
+  <!-- Spring的jar包 -->
+	<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-context</artifactId>
+	<version>${spring-context_version}</version>
+	</dependency>
+	 
+	 <dependency>
+	 <groupId>org.springframework</groupId>
+	 <artifactId>spring-beans</artifactId>
+	 <version>${spring-beans_version}</version>
+	 </dependency>
+	 
+	 <dependency>
+	 <groupId>org.springframework </groupId>
+	 <artifactId>spring-core</artifactId>
+	 <version>${spring-core_version}</version>
+	 </dependency>
+
+	  <dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-expression</artifactId>
+	  <version>${spring-expression_version}</version>
+	  </dependency>
+	
+	<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-jdbc</artifactId>
+	<version>${spring-jdbc_version}</version>
+	</dependency>
+	
+	<dependency>
+	<groupId>org.springframework </groupId>
+	<artifactId>spring-tx</artifactId>
+	<version>${spring-tx_version}</version>
+	</dependency>
+	
+	<!-- c3p0 -->
+	<!-- <dependency>
+	<groupId>c3p0</groupId>
+	<artifactId>c3p0</artifactId>
+	<version>${c3p0_version}</version>
+	</dependency> -->
+	
+	<!-- dbcp -->
+	<dependency>
+	<groupId>commons-dbcp</groupId>
+	<artifactId>commons-dbcp</artifactId>
+	<version>${commons-dbcp_version}</version>
+	</dependency>
+	
+	<dependency>
+	 <groupId>org.apache.commons</groupId>
+       <artifactId>commons-pool2</artifactId>
+	<version>${commons-pool_version}</version>
+	</dependency>
+
+	<!-- 日志包 -->
+   <dependency>
+   <groupId>commons-logging</groupId>
+    <artifactId>commons-logging</artifactId>
+    <version>${commons-logging_version}</version>
+   </dependency>
+   <!-- mySql驱动 -->
+   <dependency>
+  <groupId>mysql</groupId>
+  <artifactId>mysql-connector-java</artifactId>
+  <version>${mysql-connector_version}</version>
+  </dependency>
+  </dependencies>
+  
+</project>

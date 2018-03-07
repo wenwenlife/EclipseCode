@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    var s=new Array("a","b","c","d","e");
+    for(index in s){
+    	document.writeln(s[index]);
+    }
+    //删除最后一个元素,并返回删除的值
+    document.writeln(s.pop());
+    document.writeln("<br>");
+    //向末尾添加值,并返回新的长度
+    document.writeln(s.push("e"));
+    document.writeln("<br>");
+    //删除第一个元素
+    document.writeln(s.shift());
+    document.writeln("<br>");
+    //向头部添加元素,并返回新的长度
+    document.writeln(s.unshift("a"));
+    document.writeln("<br>");
+    //把数组转换为字符串并打印
+    document.writeln(s.toString());
+    document.writeln("<br>");
+    
+    var ss="你好";
+    document.write(ss.link("https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript"));
+/*     正则表达式 */
+    var email = "haohao_827@163.com"
+	var reg = /^[A-z]+[A-z0-9_-]*\@[A-z0-9]+\.[A-z]+$/;
+	document.writeln(email.match(reg));
+    
+</script>
+</head>
+<body>
+
+</body>
+</html>

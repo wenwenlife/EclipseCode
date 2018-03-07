@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+var main = document.body;
+//创建链接
+function createa(url,text)
+{
+    var link=document.createElement("a");
+    link.href=url;
+    link.innerHTML=text;
+    main.appendChild(link);
+    
+    
+}
+// 调用函数创建链接
+createa("http://www.imooc.com","请点击");
+
+</script> 
+</html>

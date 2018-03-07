@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+xmlns="http://www.springframework.org/schema/beans"  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:tx="http://www.springframework.org/schema/tx"
+xmlns:p="http://www.springframework.org/schema/p"  
+xmlns:c="http://www.springframework.org/schema/c" 
+xmlns:util="http://www.springframework.org/schema/util"   
+xsi:schemaLocation="  
+http://www.springframework.org/schema/beans         
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd  
+http://www.springframework.org/schema/context            
+http://www.springframework.org/schema/context/spring-context-4.3.xsd
+http://www.springframework.org/schema/util 
+http://www.springframework.org/schema/util/spring-util-4.3.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+
+<!-- 目标类 -->
+<bean id="ServletImplId" class="SpringAspect.ServiceImpl"></bean>
+<!-- 切面类 -->
+<bean id="MyaspectId" class="SpringAspect.Myaspect"></bean>
+<!-- 设置切入点 -->
+<aop:config>
+<aop:aspect ref="MyaspectId">
+<!-- 设置切入点 -->
+<aop:pointcut id="springAspectId" expression="execution(* SpringAspect.ServiceImpl.*(..))"/>
+<!-- 前置通知 -->
+<aop:before method="myBefore" pointcut-ref="springAspectId"/>
+<!-- 后置通知,并返回返回值 -->
+<aop:after-returning method="myAfterReturning" pointcut-ref="springAspectId" returning="ret"/>
+<!-- 环绕通知 -->
+<aop:around method="myAround" pointcut-ref="springAspectId"/>
+<!-- 设置切面 -->
+<!-- <aop:advisor advice-ref="Myaspect" pointcut-ref="springAspectId"/> -->
+</aop:aspect>
+</aop:config>
+</beans>

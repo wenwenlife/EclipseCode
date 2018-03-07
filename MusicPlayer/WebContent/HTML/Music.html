@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>默默无文音乐播放器</title>
+<link rel="stylesheet" type="text/css" href="../CSS/Music.css">
+<style type="text/css">
+#MyMusic{
+	width: 900px;
+	height:600px;
+	background-color:red;
+	margin: 60px auto
+	}
+	
+#MusicL{
+	width: 650px;
+	height:525px;
+	background-color:green;
+	float: left;
+	background-image: url("../images/left.gif");
+	}
+	
+#MusicR{
+	width: 250px;
+	height:525px;
+	background-color:#070707;
+	float:right;
+	}
+	
+	#clear{
+	clear: both;
+	}
+	
+	#MusicR ul{
+	 width: 160px;
+	 height: 175px;
+	 list-style:none;
+	 margin: 30px auto;
+	 padding: 0 0;
+	}
+	 /* 图片和歌名 */
+	
+	#MusicR ul li:nth-child(2){
+	text-align: center;
+	font-size: 17px;
+    color:white;
+	padding: 0 0;.
+	line-height: 33px;
+	border-bottom: 2px solid white;
+	}
+	
+	/* 显示歌词 */
+
+	#showLrc{
+	width:100%;
+	height: 289px;
+	background-color: #070707;
+	text-align: center;
+	font-size: 13px;
+	overflow-y: auto;
+	color: #d0e69c;
+	}
+     
+     .color{
+     color: white;
+     font-size: 16px;
+     }
+		
+	#Footer{
+		width: 100%;
+		height:75px;
+		background-image: url("../images/Footer.jpg");
+		}
+		
+		#music{
+		margin: 17px 35%;
+		}
+		
+	#play{
+	   width: 100px;
+	   height: 34;
+	   color: white;
+	   font-weight: bold;
+	   background-color: #3385ff;
+	   border: 1px solid #3385ff;
+	   margin-top:30px;
+	   margin-left: 30%;
+	
+	}	
+
+</style>
+</head>
+<body>
+
+<!-- 大盒子 -->
+<div id="MyMusic">
+<!-- 左边 -->
+	<div id="MusicL">
+	<textarea id="lrc">
+	[ti:红昭愿]
+[ar:音阙诗听]
+[al:]
+[by:果果]
+[t_time:(02:53)]
+[00:00.00]音阙诗听 - 红昭愿
+[00:02.00]作曲: 殇小谨
+[00:04.00]作词: 荒唐客
+[00:06.00]编曲：朱鸽
+[00:08.00]混音：殇小谨
+[00:10.00]美工：睢亦
+[00:12.00]歌词编辑：果果
+[00:14.00]QQ:765708831
+[00:16.00]歌词千寻 www.lrcgc.com
+[00:18.00]
+[00:18.82]手中雕刻生花 刀锋千转蜿蜒成画
+[00:22.73]盛名功德塔 是桥畔某处人家
+[00:27.05]春风绕过发梢红纱 刺绣赠他
+[00:30.56]眉目刚烈拟作妆嫁
+[00:35.25]轰烈流沙枕上白发 杯中酒比划
+[00:38.98]年少风雅鲜衣怒马 也不过一刹那
+[00:43.30]难免疏漏儿时檐下 莫测变化
+[00:47.33]隔却山海 转身从容煎茶
+[00:51.85]
+[01:08.37]重寄一段过往
+[01:11.20]将希冀都流放 可曾添些荒唐
+[01:14.83]才记得你的模样
+[01:16.86]谁提笔只两行
+[01:19.19]换一隅你安康 便销得这沧桑
+[01:23.16]你还在我的心上
+[01:25.30]
+[01:42.09]彼时南面隔春风 一刀裁入断玲珑
+[01:46.27]寥落晨时须臾问 长游不归莫相送
+[01:49.62]何年东君迟来久 细数银丝鬓上逢
+[01:53.93]恐有街头胭脂色 柳絮沾白雪沾红
+[01:58.70]轰烈流沙枕上白发 杯中酒比划
+[02:02.71]年少风雅鲜衣怒马 也不过一刹那
+[02:06.83]难免疏漏儿时檐下 莫测变化
+[02:10.84]隔却山海 转身从容煎茶
+[02:15.11]重寄一段过往
+[02:17.98]将希冀都流放 可曾添些荒唐
+[02:21.58]才记得你的模样
+[02:23.62]谁提笔只两行
+[02:25.94]换一隅你安康 便销得这沧桑
+[02:29.88]你还在我的心上
+[02:31.98]重寄一段过往
+[02:34.62]将希冀都流放 可曾添些荒唐
+[02:38.19]才记得你的模样
+[02:40.32]谁提笔只两行
+[02:42.96]换一隅你安康 便销得这沧桑
+[02:46.61]你还在我的心上
+[02:49.12]
+</textarea>
+	</div>
+	<!-- 右边 -->
+	<div id="MusicR">
+	<ul>
+	  <li>
+	  <img  alt="歌曲封面" src="../images/fengmian.jpg" width="160" height="160" >
+	  </li>
+	  <li>《相聚万年树》<li>
+	</ul>
+	<!-- 歌词 -->
+		<div id="showLrc"></div>
+	</div>
+	<!-- 清除浮动 -->
+    <div id="clear"></div>
+   
+    <!-- 底部 -->
+    <div id="Footer">
+     <!-- 音乐 -->
+    <audio controls id="music" src="../music/林和夜 - 相聚万年树.mp3"></audio>
+    <!-- <input type="button" value="播放" id="play"> -->
+    </div>
+</div>
+
+</body>
+<script src="../JS/jQuery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//歌词部分
+	var html="";
+	/* 播放音乐 */
+/* 	var mark=true;
+	$("#play").click(function(){
+		//播放
+		if(mark==true){
+			$("#music").get(0).play();
+			mark=false;
+			$("#play").val("播放");
+			//暂停
+		}else{
+			$("#play").val("暂停");
+			$("#music").get(0).pause();
+			mark=true;
+
+		}
+	});
+	 */
+	/* 切割歌词 */
+	
+var lrc=$("#lrc").val();
+	//时间与歌词分离
+	var lrcArr1 =lrc.split("[");
+    for(var i=0;i<lrcArr1.length;i++){
+    	 //循环再次分割
+    	var lrcArr2=lrcArr1[i].split("]");
+    	
+    	//拿到时间  lrcArr2[0]为时间  lrcArr2[1]为歌词
+    	var t=lrcArr2[0].split(".");
+    	var time=t[0].split(":");
+    
+    	//获取时间秒数
+    	var miao =time[0]*60+time[1]*1;
+    	//拿到歌词
+    	var message =lrcArr2[1];
+    	if(message){
+    		html+="<p id='"+miao+"'>"+message+"</p>"
+    	}
+    	
+    	$("#showLrc").html(html);
+    }
+    
+    //歌词联动
+    $("#music").get(0).addEventListener("timeupdate",function(){
+    	//获取播放时间
+    	var timer=this.currentTime;
+    	//通过时间驱动歌词
+    	var s =parseInt(timer);
+    	console.log(s);
+    	for(var i=0;i<s;i++){
+    		$("#"+i).addClass("color").siblings().removeClass("color");
+    		$("#showLrc").scrollTop(($("#music").index-10)*30);
+    	}
+    });
+});
+
+
+</script>
+</html>

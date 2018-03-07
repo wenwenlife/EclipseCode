@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>控制台 - Bootstrap后台管理系统模版Ace下载</title>
+		<meta name="keywords" content="erp" />
+		<meta name="description" content="无纸化办公 " />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!--[if IE7 IE8 IE9 ]  >
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+			<script src="assets/js/html5shiv.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+		<!-- fonts -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
+<style type="text/css">
+
+
+
+.navbar-brand{
+font-size: 30px;
+color: #222;
+}
+.guanli{
+font-size: 15px;
+}
+
+.left{
+  width: 70%;
+  height: 670px;
+  padding: 0px 8px;
+  margin: 0px 0px;
+}
+</style>
+	</head>
+<body>
+
+<div class="container">
+     <!-- 导航栏 -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">ERP<small class="guanli">管理系统</small></a>
+    </div>
+    
+     <ul class="nav navbar-nav navbar-left"> 
+            <li><a href="#"><span class="glyphicon glyphicon-pencil"></span> 待办</a></li> 
+            <li><a href="#"><span class="glyphicon glyphicon-bell"></span> 提醒</a></li> 
+            <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> 提醒</a></li> 
+        </ul> 
+     
+     <ul class="nav navbar-nav navbar-right alert-info"> 
+     <li>
+			<img class="img-circle " src="../images/su.jpg" alt="苏苏Photo" />
+			</li>
+			<li>
+			<span class="b">
+			              苏苏<br>
+				<small>你好!</small>
+			</span></li>
+     </ul>
+
+    </div>
+</nav>
+
+<!-- 左侧导航 -->
+<div class="row"  class="left">
+<div class="col-md-2">
+<nav class="navbar navbar-default left center-block" role="navigation" >
+	<div class="container-fluid"> 
+	<div class="navbar-header">
+		<a  href="#"><h2>菜单</h2></a>
+			</div>
+	</div>
+	  <ul class="nav nav-tabs">
+	<li class="active"><a href="#">个人中心</a></li>
+	</ul>
+	<ul class="nav nav-tabs">
+	<li><a href="#">菜单搜索</a></li>
+	</ul>
+	<ul class="nav nav-tabs">
+	<li><a href="#">人力资源管理</a></li>
+	</ul>
+	<ul class="nav nav-tabs">
+	<li><a href="#">财务管理</a></li>
+	</ul>
+	<ul class="nav nav-tabs">
+	<li class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			行政管理 
+			<span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a href="#">文件管理</a></li>
+			<li><a href="#">档案审批</a></li>
+			<li><a href="#">物资管理</a></li>
+		</ul>
+	</li>
+	</ul>
+	<ul class="nav nav-tabs">
+	<li><a data-toggle="tab" href="#baidu">物业管理</a></li>
+	</ul>
+</nav>
+</div><!-- col-md-2 -->
+
+<div class="col-md-10">
+   <div class="tab-content">
+   <div  id="baidu"  class="tab-pane fade">
+     <table class="table table-hover ">
+  <thead >
+     <th class="info">头像</th>
+     <th class="info">名字</th>
+     <th class="info">HP</th>
+  </thead>
+  
+     <tr>
+        <td><img width="20px" src="http://how2j.cn/study/bootstrap/lol/gareen.png"/></td>  
+        <td>盖伦</td>  
+        <td>616</td>  
+     </tr>
+ <tr>
+        <td><img width="20px" src="http://how2j.cn/study/bootstrap/lol/teemo.png"/></td>  
+        <td>提莫</td>  
+        <td>383</td>  
+     </tr>
+ <tr>
+        <td><img width="20px" src="http://how2j.cn/study/bootstrap/lol/akali.png"/></td>  
+        <td>阿卡丽</td>  
+        <td>448</td>  
+     </tr>
+  </tbody>
+</table>
+       </div> 
+       </div>
+       
+   <div class="tab-content">
+   <div  id="baidu"  class="tab-pane fade">
+   <form role="form">
+  <div class="form-group">
+    <label for="name">名称</label>
+    <input type="text" class="form-control" id="name" placeholder="请输入名称">
+  </div>
+   
+   </div>
+   </div>
+</div><!-- col-md-10 -->
+</div><!-- row -->
+
+</div><!-- page -->
+</body>
+   <script src="../bootstrap/jQuery/jQuery.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>使对象数组排序</title>
+</head>
+<script >
+var by=function(name){
+	return function(o,p){
+		var a,b;
+		if(o==="object"&&p==="object"&&o&&p){
+			a=o[name];
+			b=p[name];
+			if(a===b){
+				return true;
+			}
+			if(typeof a===typeof b){
+				return a<b?-1:1;
+			}
+			return typeof a>typeof b ?-1:1;
+		}else{
+			throw {
+			name :'error';
+			message :'出错了'
+			}
+		}
+	}
+}
+
+</script>
+<body>
+
+</body>
+</html>

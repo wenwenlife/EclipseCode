@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 第二个选择框随第一个改变而改变 -->
+</head>
+<body>
+<select id="city">
+   <option value="zz">郑州</option>
+   <option value="xm">新密</option>
+   <option value="xz">新郑</option>
+</select>
+<select id="acer">
+   <option>金水区</option>
+   <option>管城区</option>
+   <option>中原区</option>
+</select>
+</body>
+<script type="text/javascript">
+  var city= document.getElementById("city");
+  city.onchange=function(){
+   var option= city.value;
+   
+   switch(option){
+   case 'zz':
+	   var s=document.getElementById("acer");
+	   s.innerHTML=" <option>金水区</option><option>管城区</option><option>中原区</option>";
+	   break;
+   
+   case 'xm':
+	   var s=document.getElementById("acer");
+	   s.innerHTML=" <option>东大街</option><option>西大街</option><option>平安路</option>";
+	   break;
+   
+   case 'xz':
+	   var s=document.getElementById("acer");
+	   s.innerHTML=" <option>龙湖</option><option>小乔</option><option>西泰</option>";
+	   break;
+   
+   }
+  };
+ 
+</script>
+</html>

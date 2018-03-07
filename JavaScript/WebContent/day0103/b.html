@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+      <span id="span">5</span>秒后跳转，如未跳转<a href="https://www.baidu.com">请点击</a>
+</body>
+
+<script type="text/javascript">
+var time=5;
+var s=function(){
+	var s=document.getElementById("span");
+	if(time>-1){
+	s.innerHTML=time;
+	time--;
+	}else{
+		location.href="https://www.baidu.com";
+	}
+}
+setInterval("s()", 1000);
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var event =function(that){
+	var reg={};
+	that.firy=function(e){
+		var array,
+		func,
+		type=typeof e ==='string'?e:e.type;
+		if(reg.hasOwnProperty(type)){
+			array=reg[type];
+			for(i=0;i<array.length;i+=1){
+				func =array[i];
+			}
+		}
+		
+	}
+	
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

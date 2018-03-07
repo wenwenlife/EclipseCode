@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+  <script type="text/javascript">
+    function Person(name,age){
+    	this.name=name;
+    	this.age=age;
+    	this.info =function(){
+    		document.writeln("我的名字是"+this.name+"<br>");
+    		document.writeln("我的年龄是"+this.age+"<br>")
+    	}
+    }
+    
+ var p= new  Person("liwen",26);
+ alert(p);
+  p.info();
+  </script>
+</head>
+<body>
+
+</body>
+</html>

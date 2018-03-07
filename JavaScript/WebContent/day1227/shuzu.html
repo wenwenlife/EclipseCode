@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+  var a=["李","文","s","d","过"];
+  var i=0;
+  function f(a){
+  if(i<=4){
+	  alert(a[i]);
+	  i++;
+  }else{
+	  i=0;
+	  f(a);
+  }
+  }
+</script>
+</head>
+<body>
+<input type="button" value="ss" onclick="f(a);"/>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+</head>
+<body>
+<!-- 邮箱验证 -->
+<label for="text">姓名</label>
+  <input id="text" type="text"><span id="span"></span>
+<a href="https://www.baidu.com" >跳转</a>
+</body>
+<script type="text/javascript">
+  var text= document.getElementById("text");
+    text.onfocus=function(){
+    	var span =document.getElementById("span");
+    	span.innerHTML="名字为纯字母";
+    	span.style.color="red";
+    };
+    text.onblur=function(){
+    	var span =document.getElementById("span");
+    	var neirong=text.value;
+    	var t=new RegExp("[A-Za-z]+$");
+    	if(t.test(neirong)){
+    	span.innerHTML="√名字符合要求";
+    	span.style.color="green";
+    	}else{
+    		span.innerHTML="名字必须为为纯字母";
+        	span.style.color="red";
+    	}
+    };
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- 获取浏览器属性 -->
+<script type="text/javascript">
+  /*   for(name in navigator){
+    	document.write("属性"+name+"的值是"+navigator[name] +"<br/>")
+    } */
+    
+    outer:
+    	for(var i=0;i<5;i++){
+    		for(var j=0;j<5;j++){
+    			document.writeln('j的值'+j);
+    			if(j>=2) continue outer;
+    			document.write('i的值'+i);
+    			document.write('<br/>');
+    			
+    		}
+    	}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

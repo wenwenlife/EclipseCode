@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var ss=function(){
+	var pre="";
+	var seq=0;
+	return{
+		pre_s : function(p){
+			pre=p;
+		},
+		
+		seq_s : function(s){
+			seq=s;
+		},
+		
+		ps : function(){
+			var result = pre+seq;
+			seq+=1;
+			return result;
+		}
+	}
+	
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

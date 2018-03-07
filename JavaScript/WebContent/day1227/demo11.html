@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var each =function(array ,fn){
+	for(var index in array){
+		fn.call(null,index,array[index])
+	}
+}
+each([4,20,3] ,function(index ,ele){
+	document.write("第"+index+"个元素是:"+ele+"<br/>");
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>

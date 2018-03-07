@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+<input type="text" id="clock">
+</body>
+<script type="text/javascript">
+function clock(){
+    var time=new Date();   
+    var times=time+time.getSeconds();
+    document.getElementById("clock").value = times;
+ }
+  var t=setInterval("clock()", 1000);
+</script>
+</html>
